@@ -1,0 +1,13 @@
+{
+  "Applications": [
+    {
+      "Process": "chrome",
+      "Keys": [ "C" ]
+    },
+    {
+      "Process": "explorer",
+      "Keys": [ "E", "X" ]
+    }
+  ],
+  "LaunchOnStartup": "True"
+}

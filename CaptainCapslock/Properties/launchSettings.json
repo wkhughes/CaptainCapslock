@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CaptainCapslock": {
+      "commandName": "Project",
+      "commandLineArgs": "-debug"
+    }
+  }
+}
