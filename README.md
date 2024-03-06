@@ -36,3 +36,9 @@ Application hotkeys and additional options are set in `Config.json`:
   - `Keys`: List of hotkeys that toggle the application.
 - `LaunchOnStartup`:
   - Set `True` to launch Captain Capslock when Windows startup.
+
+## Building
+Publish a standalone exe (dependent on .NET framework):
+```
+dotnet publish -p:PublishSingleFile=true --no-self-contained
+```
