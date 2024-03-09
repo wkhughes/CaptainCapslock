@@ -6,14 +6,17 @@
         private Console? console;
 
         public event Action? ReloadConfig;
+        public event Action? OpenConfigFolder;
 
         public NotificationIcon()
         {
             var icon = new Icon(Path.Combine(AppContext.BaseDirectory, "icon.ico"));
 
             var contextMenuStrip = new ContextMenuStrip();
-            contextMenuStrip.Items.Add("Show Console", null, ShowConsole);
             contextMenuStrip.Items.Add("Reload Config", null, (sender, e) => ReloadConfig?.Invoke());
+            contextMenuStrip.Items.Add("Open Config Folder", null, (sender, e) => OpenConfigFolder?.Invoke());
+            contextMenuStrip.Items.Add("-");
+            contextMenuStrip.Items.Add("Show Console", null, ShowConsole);
             contextMenuStrip.Items.Add("-");
             contextMenuStrip.Items.Add("Exit", null, Exit);
 

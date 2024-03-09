@@ -4,6 +4,7 @@ using CaptainCapslock.Registry;
 using CaptainCapslock.Remote;
 using CaptainCapslock.UI;
 using CaptainCapslock.UserConfig;
+using System.Diagnostics;
 using Windows.Win32.UI.Input.KeyboardAndMouse;
 
 namespace CaptainCapslock
@@ -38,6 +39,7 @@ namespace CaptainCapslock
 
             var icon = new NotificationIcon();
             icon.ReloadConfig += InitializeFromConfig;
+            icon.OpenConfigFolder += () => Process.Start("explorer.exe", AppContext.BaseDirectory);
             Application.Run();
             Logger.Info("Closed by user");
         }
